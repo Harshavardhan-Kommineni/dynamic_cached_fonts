@@ -1,3 +1,5 @@
+This is just a FORK to actual dynamic cache fonts for maintaining latest version. Please feel free to raise PR if see see any issues
+
 # Dynamic Cached Fonts
 
 [![Pub Version][pub-version-badge]][pub-package]
