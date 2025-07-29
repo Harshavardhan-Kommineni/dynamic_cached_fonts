@@ -189,11 +189,11 @@ class DynamicCachedFonts {
     this.maxCacheObjects = kDefaultMaxCacheObjects,
     this.cacheStalePeriod = kDefaultCacheStalePeriod,
   })  : assert(
-          fontFamily != '',
+          fontFamily.isNotEmpty,
           'fontFamily cannot be empty',
         ),
         assert(
-          bucketUrl != '',
+          bucketUrl.isNotEmpty,
           'bucketUrl cannot be empty',
         ),
         urls = <String>[bucketUrl],
@@ -271,13 +271,11 @@ class DynamicCachedFonts {
       // The validity is determined by parsing headers returned when the file was
       // requested. The date/time is a file validity guarantee by the source.
       // This was done to preserve `Cachemanager.getSingleFile`'s behaviour.
-      fontFiles
-          .where((FileInfo font) => font.validTill.isBefore(DateTime.now()))
-          .forEach((FileInfo font) => cacheFont(
-                font.originalUrl,
-                cacheStalePeriod: cacheStalePeriod,
-                maxCacheObjects: maxCacheObjects,
-              ));
+      fontFiles.where((FileInfo font) => font.validTill.isBefore(DateTime.now())).forEach((FileInfo font) => cacheFont(
+            font.originalUrl,
+            cacheStalePeriod: cacheStalePeriod,
+            maxCacheObjects: maxCacheObjects,
+          ));
     } catch (_) {
       devLog(<String>['Font is not in cache.', 'Loading font now...']);
 
