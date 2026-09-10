@@ -22,8 +22,8 @@ dev_dependencies:
     sdk: flutter
 
 environment:
-   sdk: ^3.13.2
-   flutter: ">=3.47.2"
+   sdk: ^3.13.3
+   flutter: ">=3.47.3"
 
 flutter:
   uses-material-design: true
