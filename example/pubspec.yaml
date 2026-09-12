@@ -23,7 +23,7 @@ dev_dependencies:
 
 environment:
    sdk: ^3.13.3
-   flutter: ">=3.47.3"
+   flutter: ">=3.47.4"
 
 flutter:
   uses-material-design: true
