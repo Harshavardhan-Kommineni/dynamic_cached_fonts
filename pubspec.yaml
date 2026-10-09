@@ -5,7 +5,7 @@ repository: https://github.com/sidrao2006/dynamic_cached_fonts
 
 environment:
   sdk: ^3.13.5
-  flutter: ">=3.47.6"
+  flutter: ">=3.47.7"
 
 dependencies:
   flutter:
