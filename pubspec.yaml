@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  firebase_storage: ^13.0.0
+  firebase_storage: ^14.0.0
   flutter_cache_manager: ^3.4.1
   meta: ^1.16.0
 
